@@ -1,38 +1,164 @@
-.App {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header{
   text-align: center;
+  color:#007bff
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin-top: 2rem;
+  border-bottom: 1px solid #007bff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto 
+}
+.focused{
+  background-color: #f2f2f2;
+}
+.bold{
+  border: 2px solid black !important;
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.chip{
+  border: 1px solid #cccccc;
+  background-color:  #e6e6e6;
+  padding-right: 0.7rem;
+  border-radius: 15px;
+  cursor: pointer;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 0.2rem;
+  margin-right: 0.4rem;
+  color: #666666;
+  font-weight: 500;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul{
+  margin: 0px;
+  margin-bottom: 0.2rem;
+  padding: 0px;
+}
+
+.selectionList{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 1px 1px lightgrey;
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  margin-top: 1rem;
+  overflow-x: none;
+}
+
+.selectionList li{
+  padding: 0.8rem 0.8rem !important;
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: space-between; 
+}
+.optionProfile{
+  display: flex;
+  font-size: 1.2rem;
+  color: #808080;
+  font-weight: 400;
+}
+.optionProfile .optionIcon{
+  font-size: 1.7rem;
+  margin-right:1rem
+}
+.optionEmail{
+  color:#999999;
+  font-weight: 400;
+}
+.selectedList{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px
+}
+
+.inputContainer{
+  cursor:pointer;
+  list-style:none;
+  margin-left:0.5rem
+}
+
+.inputContainer input{
+  border:none;
+  outline:none;
+  font-size: 1rem;
+  position: relative;
+}
+.chipIcon{
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.chipX{
+  margin: 0rem 0.5rem;
+  font-weight: bold;
+}
+::-webkit-scrollbar{
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: lightgray;
+}
+@media screen and (max-width: 1600px) {
+  .container{
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+  .selectionList{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container{
+    width: 60%;
+  }
+  .selectionList{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container{
+    width: 80%;
+  }
+  .selectionList{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .selectionList li{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .optionProfile{
+    align-items: center;
+  }
+  .optionEmail{
+    margin-left: 2.65rem;
   }
 }
